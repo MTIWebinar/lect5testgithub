@@ -3,9 +3,6 @@
 class Person(object):
 	"""docstring for Person"""
 
-	obj_id = 0
-	name = '***'
-
 	def __init__(self, obj_id=None, name=None):
 		super(Person, self).__init__()
 		self.obj_id = obj_id
