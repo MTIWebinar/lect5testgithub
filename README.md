@@ -5,6 +5,6 @@ Test Webinar Project
 
 ===================
 Teamers:
-simVM75@Yandex.ru
-mberdyugin@gmail.com
-osipovka@gmail.com
+Vladimir: simVM75@Yandex.ru
+Maxim: mberdyugin@gmail.com
+Kirill: osipovka@gmail.com
