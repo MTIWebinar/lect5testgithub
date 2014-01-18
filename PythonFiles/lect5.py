@@ -14,7 +14,7 @@ class Person(object):
 		self.__dict__.update(kwargs)
 
 	def __str__(self):
-		str_form = '{} ' * self.__len__()
+		str_form = '{} ' * len(self)
 		items = (str_form.format(k, self.__dict__[k]).strip() for k in self.__dict__)
 		return '|'.join(items)
 
@@ -24,12 +24,12 @@ class Person(object):
 def parsed(inStr=None):
 	regex_dig = ur'[,.\d]+'
 	regex_cha = ur'[^\d., ]+'
-	return dict(digit=''.join(findall(regex_dig, inStr)),
-				word=' '.join(findall(regex_cha, inStr))
+	return dict(d=''.join(findall(regex_dig, inStr)),
+				w=' '.join(findall(regex_cha, inStr))
 			)
 
 def main():
-	humans = [Person(age=parsed(item)['digit'], name=parsed(item)['word']) for item in data]
+	humans = [Person(age=parsed(item)['d'], name=parsed(item)['w']) for item in data]
 
 	vasya = humans[0]
 	print vasya
